@@ -26,3 +26,7 @@ Route::get('/home', function () {
 
     return view('home', $data);
 })->name('home');
+
+Route::get('/chi-siamo', function () {
+    return view('about');
+})->name('about');
