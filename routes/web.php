@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('home');
-});
+
+    $data = [
+        'title' => 'L`Albero della vita',
+        'director' => 'Darren Aronofsky',
+        'year' => '2006',
+        'genre' => 'Fantastico, Drammatico, Sentimentale',
+        'actors' => ['Hugh Jackman', 'Rachel Weisz', 'Ellen Burstyn'],
+
+    ];
+
+    return view('home', $data);
+})->name('home');

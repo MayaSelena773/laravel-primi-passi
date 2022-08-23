@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Film preferito (uno dei tanti)</h1>
+
+    <p>Titolo: {{ $title }}</p>
+    <p>Regista: {{ $director }}</p>
+    <p>Anno: {{ $year }}</p>
+    <p>Genere: {{ $genre }}</p>
+
+    <p>Attori principali:</p>
+    @forelse ($actors as $actor)
+        {{ $actor }}@if(!$loop->last), @endif
+    @empty
+        <div>Non ci sono attori</div>       
+    @endforelse
+
 </body>
 </html>
